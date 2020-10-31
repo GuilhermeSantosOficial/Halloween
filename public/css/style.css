@@ -115,7 +115,7 @@ img{
     }
 }
 
-.bruxa1{
+/* .bruxa1{
     position: absolute;
     bottom: 50em;
     left: 100px;
@@ -145,9 +145,9 @@ img{
     width: 15em;
     height: 15em;
     animation: move-bruxa2 5s linear infinite;
-}
+} */
 
-@keyframes move-bruxa2{
+/* @keyframes move-bruxa2{
     0%{
         transform: translate(0,0) rotate(0deg);
     }
@@ -171,7 +171,7 @@ img{
     100%{
         transform: translate(800px, 400px) rotateY(180deg);
     }
-}
+} */
 
 .skull{
     width: 45px;
@@ -211,6 +211,7 @@ a{
 
 .action.active span{
     transform: rotate(180deg);
+    
 }
 
 .action ul{
@@ -223,6 +224,7 @@ a{
     opacity: 0;
     visibility: hidden;
     transition: 0.3s;
+
 }
 
 .action.active ul{
@@ -230,6 +232,7 @@ a{
     opacity: 1;
     visibility: visible;
     transition: 0.3s;
+
 }
 
 .action ul li{
@@ -266,7 +269,7 @@ a{
         left: 37%;
     }
 
-    .bruxa1{
+    /* .bruxa1{
         position: absolute;
         bottom: 30em;
         left: 100px;
@@ -282,5 +285,5 @@ a{
         width: 10em;
         height: 10em;
         animation: move-bruxa2 5s linear infinite;
-    }
+    } */
 }
