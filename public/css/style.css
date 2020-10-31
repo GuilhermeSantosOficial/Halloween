@@ -265,10 +265,16 @@ a{
 }
 
 @media(max-width: 760px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     .content h1{
         top: 150px;
         font-size: 2.3em;
-        left: 37%;
+        left: 30%;
     }
 
     /* .bruxa1{
