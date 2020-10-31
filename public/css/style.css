@@ -94,15 +94,23 @@ img{
 
 /* site full color */
 
-.image-halloween{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(-10deg, #03a9f4 0%, #3a78b7 50%, #262626 50%, #607d8b 100%);
-    filter: hue-rotate(120deg);
-    animation: animate 10s linear infinite;
+.image-halloween {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(-10deg, #03a9f4 0%, #3a78b7 50%, #262626 50%, #607d8b 100%);
+	filter: hue-rotate(120deg);
+	animation: animate 10s linear infinite;
+}
+.image-halloween img {
+	height: 100vh;
+	width: auto;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	min-width: 100vw;
 }
 
 @keyframes animate{
@@ -114,7 +122,11 @@ img{
         filter: hue-rotate(360deg);
     }
 }
-
+.body,html{
+    padding: 0;
+    margin: 0;
+    overflow-x:hidden;
+}
 /* .bruxa1{
     position: absolute;
     bottom: 50em;
@@ -187,16 +199,18 @@ a{
     text-decoration: none;
     color: #000;
 }
-.action{
-    position: fixed;
-    bottom: 50px;
-    left: 50px;
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+.action {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+	background: #fff;
+	border-radius: 50%;
+	cursor: pointer;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+	transform: translate(100%,-100%);
+	z-index: 2;
 }
 
 .action span{
