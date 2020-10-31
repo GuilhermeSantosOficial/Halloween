@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Henny Penny", sans-serif;
+}
+
+
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+img{
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Happy Halloween */
+
+.content{
+    position: relative;
+
+
+}
+
+.content h1{
+    position: absolute;
+    top: 250px;
+    left: 47%;
+    transform: translate(-50%,-50%);
+    font-size: 5em;
+    text-align: center;
+    line-height: 1;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    animation: animates2 5s linear infinite;
+
+    z-index: 1;
+
+}
+
+.content h1:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: 2px #ffa500;
+}
+
+.content h1:nth-child(2){
+    color: #660000;
+    animation: animates 4s ease-in-out infinite;
+    
+}
+
+@keyframes animates{
+    0%,100%{
+        clip-path: polygon(0 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+
+        /* 0 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100% */
+    }
+
+    60%{
+        clip-path: polygon(0 70%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+
+        /* 0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100% */
+    }
+
+    0%{
+        transform: translate(5px,5px);
+    }
+
+    50%{
+        transform: translate(5px,1.50px);
+    }
+
+    100%{
+        transform: translate(5px,5px);
+    }
+}
+
+@keyframes animates2{
+    0%{
+        transform: translate(5px,5px);
+    }
+
+    50%{
+        transform: translate(5px,0px);
+    }
+
+    100%{
+        transform: translate(5px,5px);
+    }
+}
+
+/* site full color */
+
+.image-halloween{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(-10deg, #03a9f4 0%, #3a78b7 50%, #262626 50%, #607d8b 100%);
+    filter: hue-rotate(120deg);
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.bruxa1{
+    position: absolute;
+    bottom: 50em;
+    left: 100px;
+    width: 15em;
+    height: 15em;
+    animation: move-bruxa1 3s linear infinite;
+}
+
+@keyframes move-bruxa1{
+    0%{
+        transform: translate(0,0);
+    }
+
+    50%{
+        transform: translate(800px, 600px);
+    }
+
+    50.1%,100%{
+        transform: translate(100px, -100px);
+    }
+}
+
+.bruxa2{
+    position: absolute;
+    top: 5em;
+    right: 100px;
+    width: 15em;
+    height: 15em;
+    animation: move-bruxa2 5s linear infinite;
+}
+
+@keyframes move-bruxa2{
+    0%{
+        transform: translate(0,0) rotate(0deg);
+    }
+
+    40%{
+        transform: translate(-1500px, -50px) rotateY(0deg); 
+    }
+
+    40.1%{
+        transform: translate(-1500px, -50px) rotateY(0deg);
+    }
+
+    50%{
+        transform: translate(-1500px, -50px) rotateY(0deg);
+    }
+
+    50.1%{
+        transform: translate(-1500px, -300px) rotateY(180deg);
+    }
+
+    100%{
+        transform: translate(800px, 400px) rotateY(180deg);
+    }
+}
+
+.skull{
+    width: 45px;
+    height: 45px;
+}
+.face, .insta, .gith{
+    width: 45px;
+    height: 45px;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+.action{
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.action span{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.action.active span{
+    transform: rotate(180deg);
+}
+
+.action ul{
+    position: absolute;
+    bottom: 55px;
+    background: #fff;
+    min-width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+.action.active ul{
+    bottom: 65px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+}
+
+.action ul li{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.action ul li:hover{
+    font-weight: bold;
+}
+
+.action ul li:not(:last-child){
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.action ul li img{
+    margin-right: 10px;
+    opacity: 0.2;
+    transform: scale(0.8);
+}
+
+.action ul li:hover img{
+    opacity: 0.8;
+}
+
+@media(max-width: 760px){
+    .content h1{
+        top: 150px;
+        font-size: 2.3em;
+        left: 37%;
+    }
+
+    .bruxa1{
+        position: absolute;
+        bottom: 30em;
+        left: 100px;
+        width: 10em;
+        height: 10em;
+        animation: move-bruxa1 3s linear infinite;
+    }
+
+    .bruxa2{
+        position: absolute;
+        top: 5em;
+        right: 100px;
+        width: 10em;
+        height: 10em;
+        animation: move-bruxa2 5s linear infinite;
+    }
+}

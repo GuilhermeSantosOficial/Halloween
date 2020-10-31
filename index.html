@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Halloween</title>
+
+    <link rel="icon" href="./public/images/icon-halloween (1).jpg">
+
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+
+    <div class="content">
+        <h1>HAPPY HALLOWEEN</h1>
+        <h1>HAPPY HALLOWEEN</h1>
+    </div>
+
+    <main class="image-halloween">
+
+        <img src="./public/images/image-halloween-n2.jpg" alt="image halloween">
+
+        <img class="bruxa1" src="./public/images/bruxa2-1.png" alt="witch">
+
+        <img class="bruxa2" src="./public/images/bruxa2-2.png" alt="witch">
+
+
+
+    </main>
+
+    <div class="action" onclick="actionToggle();">
+        <span><img class="skull" src="/public/images/skull.png" alt=""></span>
+        
+        <ul>
+            <li><img class="face" src="./public/images/facebook.png" alt="Meu Facebook"><a target="_blank" href="https://www.facebook.com/profile.php?id=100003730075259">FACEBOOK</a></li>
+
+            <li><img class="insta" src="./public/images/instagram.png" alt="Meu Instagram"><a target="_blank" href="https://www.instagram.com/guilhermelcr0/">INSTAGRAM</a></li>
+
+            <li><img class="gith" src="./public/images/github.png" alt="Meu Github"><a target="_blank" href="https://github.com/GuilhermeSantosOficial">GITHUB</a></li>
+        </ul>
+    </div>
+    
+    <script type="text/javascript">
+        function actionToggle(){
+            var action = document.querySelector('.action');
+            action.classList.toggle('active')
+        }
+    </script>
+    
+</body>
+</html>
